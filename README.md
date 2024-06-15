@@ -1,19 +1,24 @@
 This README provides an overview of my custom Tmux configuration detailed in the `~/.tmux.conf` file. This configuration enhances Tmux with useful plugins, custom key bindings, and a Dracula theme setup.
 
-## Key Bindings
+## Preview
 
-- **Reload Configuration:**
-  - Unbind the default `r` key.
-  - Bind `r` to reload the Tmux configuration file: `source-file ~/.tmux.conf`.
-  
-- **Prefix Key:**
-  - Set the prefix key to `Ctrl+b`.
+![Tmux Screenshot](./screenshot.png)
 
-- **Mouse Mode:**
-  - Enable mouse support.
+## Installation
 
-- **Vi Mode:**
-  - Enable vi mode for Tmux command and copy mode.
+1. **Install Tmux Plugin Manager (TPM):**
+   ```bash
+   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
+   ```
+
+2. **Copy the provided `~/.tmux.conf` configuration file to your home directory.**
+
+3. **Start Tmux and press `prefix+I` (Ctrl+b, Shift+i) to install the plugins.**
+
+## Plugin Initialization
+
+- **Initialize TPM:**
+  - Keep this line at the bottom of the configuration file: `run '~/.tmux/plugins/tpm/tpm'`
 
 ## Plugins
 
@@ -51,10 +56,20 @@ This README provides an overview of my custom Tmux configuration detailed in the
   - Weather: `set -g @dracula-weather-colors "light_purple dark_gray"`
   - Time: `set -g @dracula-time-colors "green dark_gray"`
 
-## Plugin Initialization
+## Key Bindings
 
-- **Initialize TPM:**
-  - Keep this line at the bottom of the configuration file: `run '~/.tmux/plugins/tpm/tpm'`
+- **Reload Configuration:**
+  - Unbind the default `r` key.
+  - Bind `r` to reload the Tmux configuration file: `source-file ~/.tmux.conf`.
+  
+- **Prefix Key:**
+  - Set the prefix key to `Ctrl+b`.
+
+- **Mouse Mode:**
+  - Enable mouse support.
+
+- **Vi Mode:**
+  - Enable vi mode for Tmux command and copy mode.
 
 ## Pane Navigation
 
@@ -62,21 +77,7 @@ This README provides an overview of my custom Tmux configuration detailed in the
   - Vertical split: `bind '"' split-window -v -c "#{pane_current_path}"`
   - Horizontal split: `bind % split-window -h -c "#{pane_current_path}"`
 
-## Preview
 
-A screenshot of the configured Tmux setup is available in the current directory as `screenshot.png`.
 
-![Tmux Screenshot](./screenshot.png)
-
-## Installation
-
-1. **Install Tmux Plugin Manager (TPM):**
-   ```bash
-   git clone https://github.com/tmux-plugins/tpm ~/.tmux/plugins/tpm
-   ```
-
-2. **Copy the provided `~/.tmux.conf` configuration file to your home directory.**
-
-3. **Start Tmux and press `prefix+I` (Ctrl+b, Shift+i) to install the plugins.**
 
 Enjoy my enhanced Tmux setup!

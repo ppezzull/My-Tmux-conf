@@ -1,3 +1,5 @@
+## My Tmux Configuration
+
 Hello everyone! 👋
 I'm excited to share my custom Tmux configuration, conveniently stored in the ~/.tmux.conf file. This setup enhances Tmux with a variety of useful plugins, personalized key bindings, and a sleek Dracula theme.
 I absolutely love using Tmux because it allows me to run multiple processes simultaneously across different sessions. It makes my workflow not only more efficient but also a lot cooler! 😎
